@@ -1,6 +1,6 @@
 /*!
 =========================================================
-* JohnDoe Landing page
+* Ananthu Portfolio
 =========================================================
 
 * Copyright: 2019 DevCRUD (https://devcrud.com)
