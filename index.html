@@ -586,7 +586,9 @@
       outline-offset: 2px;
       border-radius: 4px;
     }
-  </style>
+  
+    .contact-modal{position:fixed;inset:0;background:rgba(7,28,43,.55);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:1.25rem;z-index:9999;opacity:0;visibility:hidden;transition:.25s}.contact-modal:target{opacity:1;visibility:visible}.contact-dialog{width:min(560px,100%);background:#fff;border:1px solid #dbeaf1;border-radius:24px;box-shadow:0 30px 80px rgba(0,30,50,.28);padding:2rem;position:relative;transform:translateY(15px);transition:.25s}.contact-modal:target .contact-dialog{transform:translateY(0)}.contact-dialog h2{font-size:1.8rem;color:#0b1c2b;margin-bottom:.35rem}.contact-dialog>p{color:#587286;margin-bottom:1.4rem}.contact-close{position:absolute;right:18px;top:15px;width:36px;height:36px;border-radius:50%;background:#edf6fb;color:#0a4b6e;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1rem}.contact-grid{display:grid;grid-template-columns:1fr;gap:.75rem}.contact-item{display:flex;align-items:center;gap:1rem;padding:1rem;border:1px solid #e0edf4;border-radius:15px;background:#f9fcfe;text-decoration:none;color:#18384d;transition:.2s}.contact-item:hover{border-color:#9bc9e1;background:#f1f9fd;transform:translateY(-2px)}.contact-item .contact-icon{width:42px;height:42px;border-radius:12px;background:#e3f3fb;color:#0077b6;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex:none}.contact-item strong{display:block;font-size:.92rem;color:#0b1c2b}.contact-item span{display:block;font-size:.82rem;color:#557084;word-break:break-word}.contact-dialog .availability{margin-top:1.2rem;padding-top:1rem;border-top:1px solid #e4eef3;color:#5a7181;font-size:.82rem}@media(max-width:480px){.contact-dialog{padding:1.4rem}.contact-dialog h2{font-size:1.5rem}}
+</style>
 </head>
 <body>
   <div class="container">
@@ -609,7 +611,7 @@
           Qatar Islamic Bank. Specialized in Flutter, Android (Java/Kotlin), and hardware 
           integration — PAX, Sunmi, Topwise POS, printers, OCR, face liveness, and secure payment SDKs.
         </p>
-        <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1.4rem;"><a href="assets/docs/resume.pdf" download class="hero-action"><i class="fas fa-file-arrow-down"></i> Download Resume</a><a href="#contact" class="hero-action secondary"><i class="fas fa-paper-plane"></i> Contact Me</a></div>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1.4rem;"><a href="assets/docs/resume.pdf" download class="hero-action"><i class="fas fa-file-arrow-down"></i> Download Resume</a><a href="#contact-modal" class="hero-action secondary"><i class="fas fa-paper-plane"></i> Contact Me</a></div>
         <div class="stats">
           <div class="stat-item">
             <span class="stat-number">10+</span>
@@ -706,7 +708,7 @@
         <p>Production FinTech/POS app used by ~2,000 merchants across Qatar. Processed 15+ million transactions. Integrated payment, receipt printing, notifications, and location services across multiple POS devices.</p>
         <div class="project-footer">
           <span><i class="fas fa-chart-line"></i> 15M+ txns</span>
-          <a href="#contact"><i class="fas fa-arrow-right"></i> details on request</a>
+          <a href="#contact-modal"><i class="fas fa-arrow-right"></i> details on request</a>
         </div>
       </div>
       <!-- Current FinTech QR -->
@@ -853,7 +855,7 @@
     </div>
 
     <!-- ===== CONTACT / FOOTER ===== -->
-    <div class="contact-bar">
+    <div class="contact-bar" id="contact">
       <h3><i class="fas fa-paper-plane"></i> Let’s build something great</h3>
       <div class="contact-links">
         <a href="mailto:mail4uananthu@gmail.com"><i class="fas fa-envelope"></i> mail4uananthu@gmail.com</a>
@@ -864,5 +866,20 @@
     </div>
 
   </div> <!-- end container -->
+
+    <div class="contact-modal" id="contact-modal" aria-label="Contact details">
+      <div class="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+        <a class="contact-close" href="#contact" aria-label="Close contact details"><i class="fas fa-times"></i></a>
+        <h2 id="contact-title">Let’s connect</h2>
+        <p>Feel free to reach out for opportunities, collaborations, or mobile application projects.</p>
+        <div class="contact-grid">
+          <a class="contact-item" href="mailto:mail4uananthu@gmail.com"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><strong>Email</strong><span>mail4uananthu@gmail.com</span></div></a>
+          <a class="contact-item" href="tel:+919995984598"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div><strong>Phone</strong><span>+91 9995984598</span></div></a>
+          <a class="contact-item" href="https://www.linkedin.com/in/ananthu-ka-80bb65166" target="_blank" rel="noopener"><div class="contact-icon"><i class="fab fa-linkedin-in"></i></div><div><strong>LinkedIn</strong><span>linkedin.com/in/ananthu-ka-80bb65166</span></div></a>
+          <a class="contact-item" href="https://github.com/AKAnanthu" target="_blank" rel="noopener"><div class="contact-icon"><i class="fab fa-github"></i></div><div><strong>GitHub</strong><span>github.com/AKAnanthu</span></div></a>
+        </div>
+        <div class="availability"><i class="fas fa-location-dot"></i> Kochi, Kerala, India · Open to mobile & FinTech opportunities</div>
+      </div>
+    </div>
 </body>
 </html>
